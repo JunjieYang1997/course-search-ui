@@ -8,5 +8,9 @@ public class WebServer {
         get("/", (req, res) -> {
             return new ModelAndView(null, "index.hbs");
         }, new HandlebarsTemplateEngine());
+
+        get("/search", (req, res) -> {
+            return new ModelAndView(null, "search.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }

@@ -5,6 +5,8 @@ import static spark.Spark.*;
 
 public class WebServer {
     public static void main(String[] args) {
+        staticFiles.location("/public");
+
         get("/", (req, res) -> {
             return new ModelAndView(null, "index.hbs");
         }, new HandlebarsTemplateEngine());

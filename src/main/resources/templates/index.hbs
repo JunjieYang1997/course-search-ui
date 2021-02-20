@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>JHU Course Search</title>
-      <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="wrap">
-          <h1>Course Search</h1>
-          <form action="/search" method="post">
-              <input type="text" placeholder="" name="query">
-              <button type="submit">GO</button>
-          </form>
-        </div>
-    </body>
-</html>
+{{#partial "content"}}
+    <div class="wrap">
+        <div class="title">Course Search</div>
+        <form class="search" action="/search" method="post">
+            <input type="text" class="searchTerm" placeholder="" name="query">
+            <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+{{/partial}}
+
+{{> base.hbs}}
+

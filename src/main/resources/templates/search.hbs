@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JHU Course Search</title>
-</head>
-<body>
-    <form action="/search" method="post">
-        <input type="text" placeholder="" name="query">
-        <button type="submit">GO</button>
+{{#partial "content"}}
+    <form class="search" action="/search" method="post">
+        <input type="text" class="searchTerm" placeholder="" name="query">
+        <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+        </button>
     </form>
-    <ul>
-        <li>EN.601.226 Data Structures</li>
-        <li>EN.601.280 Full-Stack JavaScript</li>
-        <li>EN.601.421 Object-Oriented Software Engineering</li>
+    <ul class="course-list">
+        <li class="course-list-item">EN.601.226 Data Structures</li>
+        <li class="course-list-item">EN.601.280 Full-Stack JavaScript</li>
+        <li class="course-list-item">EN.601.421 Object-Oriented Software Engineering</li>
     </ul>
-</body>
+{{/partial}}
+
+{{> base.hbs}}
